@@ -1,0 +1,25 @@
+# Welcome to Live Markdown Editor
+
+A fast, lightweight, and dependency-free **Markdown parser** built with HTML, CSS, and Vanilla JavaScript.
+
+## Features at a glance
+- **Real-time Live Preview:** Type on the left, see rendered output on the right.
+- **Word & Character Counters:** Live stats update instantly.
+- **File Exporter:** Download your files directly to your device.
+
+---
+
+### Code Sample
+```javascript
+function calculateWords(text) {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+```
+
+### Formatted Quotes
+> "Simplicity is prerequisite for reliability." – Edsger W. Dijkstra
+
+### Lists & Tasks
+* [x] Split-pane layout
+* [x] Pure HTML, CSS, and JS
+* [ ] Local Storage Persistence

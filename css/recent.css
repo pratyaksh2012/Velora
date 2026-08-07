@@ -1,0 +1,260 @@
+/* ==========================================
+   Velora Recent Calls Styles
+========================================== */
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 16px 20px;
+    background: rgba(37, 99, 235, 0.92);
+    backdrop-filter: blur(20px);
+    color: white;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header-title span {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.action-icon-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.05);
+}
+
+.badge-btn {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ef4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.search-bar-wrapper {
+    margin-top: 14px;
+}
+
+.search-bar-wrapper input {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 16px;
+    border: none;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    color: #1f2937;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.filter-chip {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+}
+
+.filter-chip.active,
+.filter-chip:hover {
+    background: white;
+    color: #2563eb;
+}
+
+.page-content {
+    padding: 20px 16px 110px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 16px 8px 8px;
+}
+
+.call-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.call-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.call-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+.call-card-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.call-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.call-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.call-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.type-icon {
+    font-size: 14px;
+}
+
+.type-icon.missed { color: #ef4444; }
+.type-icon.outgoing { color: #22c55e; }
+.type-icon.incoming { color: #2563eb; }
+
+.call-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-btn {
+    border: none;
+    background: #eff6ff;
+    color: #2563eb;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+    background: #dbeafe;
+}
+
+.icon-btn.delete {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.icon-btn.delete:hover {
+    background: #fee2e2;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+.empty-state h3 {
+    font-size: 22px;
+    margin-top: 12px;
+}
+
+.empty-state p {
+    font-size: 14px;
+    opacity: 0.8;
+}

@@ -1,0 +1,234 @@
+/* ==========================
+   General
+========================== */
+
+body{
+    margin:0;
+    padding:0;
+    background:#f5f7fb;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#222;
+}
+
+/* ==========================
+   Header
+========================== */
+
+.dial-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+    background:#ffffff;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.dial-header h2{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
+}
+
+.back-btn,
+.contacts-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#eef2ff;
+    cursor:pointer;
+    font-size:20px;
+    transition:.25s;
+}
+
+.back-btn:hover,
+.contacts-btn:hover{
+    background:#dbeafe;
+    transform:scale(1.08);
+}
+
+/* ==========================
+   Display
+========================== */
+
+.dial-display{
+    padding:35px 20px 20px;
+    text-align:center;
+}
+
+#callerName{
+    min-height:28px;
+    color:#6366f1;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+#phoneNumber{
+    width:90%;
+    max-width:380px;
+    border:none;
+    outline:none;
+    background:white;
+    border-radius:16px;
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+    padding:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   Dial Grid
+========================== */
+
+.dial-grid{
+    width:340px;
+    max-width:95%;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.dial-key{
+    height:82px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+    transition:.25s;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.dial-key:hover{
+    transform:translateY(-3px);
+    background:#eef2ff;
+}
+
+.dial-key span{
+    font-size:30px;
+    font-weight:700;
+}
+
+.dial-key small{
+    margin-top:2px;
+    font-size:11px;
+    color:#666;
+    letter-spacing:1px;
+}
+
+/* ==========================
+   Actions
+========================== */
+
+.dial-actions{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:28px;
+    margin:30px 0 110px;
+}
+
+.call-btn{
+    width:72px;
+    height:72px;
+    border:none;
+    border-radius:50%;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    font-size:30px;
+    box-shadow:0 10px 22px rgba(34,197,94,.35);
+    transition:.25s;
+}
+
+.call-btn:hover{
+    transform:scale(1.08);
+    background:#16a34a;
+}
+
+.delete-btn{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+    font-size:24px;
+    box-shadow:0 8px 18px rgba(239,68,68,.35);
+    transition:.25s;
+}
+
+.delete-btn:hover{
+    transform:scale(1.08);
+    background:#dc2626;
+}
+
+/* ==========================
+   Bottom Navigation
+========================== */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:74px;
+    background:white;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    box-shadow:0 -3px 15px rgba(0,0,0,.08);
+}
+
+.bottom-nav a{
+    text-decoration:none;
+    color:#666;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:13px;
+    transition:.25s;
+}
+
+.bottom-nav a.active{
+    color:#6366f1;
+    font-weight:bold;
+}
+
+.bottom-nav a:hover{
+    color:#6366f1;
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:480px){
+
+    .dial-grid{
+        gap:12px;
+    }
+
+    .dial-key{
+        height:72px;
+    }
+
+    .dial-key span{
+        font-size:26px;
+    }
+
+    #phoneNumber{
+        font-size:24px;
+    }
+
+}

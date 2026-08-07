@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora • Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h2>Settings</h2>
+                <span>Preferences & Control</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+
+        <!-- Account Section -->
+        <section class="settings-group">
+            <div class="group-header">Account</div>
+            <div class="settings-card profile-preview-card">
+                <div class="avatar-container">
+                    <div id="profileAvatar" class="profile-avatar">V</div>
+                    <label for="avatarUpload" class="avatar-edit-badge">📷</label>
+                    <input type="file" id="avatarUpload" accept="image/*" style="display:none;">
+                </div>
+                <div class="profile-details">
+                    <h3 id="settingUsername">User Name</h3>
+                    <p id="settingEmail">user@example.com</p>
+                    <p id="settingPhone">+1 000 000 0000</p>
+                </div>
+                <button id="editProfileBtn" class="btn-secondary">Edit</button>
+            </div>
+        </section>
+
+        <!-- Appearance Section -->
+        <section class="settings-group">
+            <div class="group-header">Appearance</div>
+            <div class="settings-card">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Theme Mode</span>
+                        <span class="setting-desc">Choose app color scheme</span>
+                    </div>
+                    <select id="themeSelect" class="setting-select">
+                        <option value="light">Light Mode</option>
+                        <option value="dark">Dark Mode</option>
+                        <option value="system">System Default</option>
+                    </select>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Accent Color</span>
+                        <span class="setting-desc">Primary theme hue</span>
+                    </div>
+                    <input type="color" id="accentColorPicker" value="#2563eb" class="setting-color">
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">UI Animations</span>
+                        <span class="setting-desc">Smooth page transitions</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="animationsToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Font Size</span>
+                        <span class="setting-desc">Text rendering scale</span>
+                    </div>
+                    <select id="fontSizeSelect" class="setting-select">
+                        <option value="small">Small</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calling Section -->
+        <section class="settings-group">
+            <div class="group-header">Calling</div>
+            <div class="settings-card">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Ringtone</span>
+                        <span class="setting-desc">Incoming call tone</span>
+                    </div>
+                    <select id="ringtoneSelect" class="setting-select">
+                        <option value="Default.mp3">Default</option>
+                        <option value="Classic.mp3">Classic</option>
+                        <option value="Crystal.mp3">Crystal</option>
+                        <option value="Galaxy.mp3">Galaxy</option>
+                        <option value="Piano.mp3">Piano</option>
+                    </select>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Vibration</span>
+                        <span class="setting-desc">Vibrate on call</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="vibrationToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Call Volume</span>
+                        <span class="setting-desc">In-call speaker level</span>
+                    </div>
+                    <input type="range" id="volumeRange" min="0" max="100" value="80" class="setting-range">
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Speaker Default</span>
+                        <span class="setting-desc">Start calls on speaker</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="speakerDefaultToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Auto Answer</span>
+                        <span class="setting-desc">Answer calls after 5s</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="autoAnswerToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Video Default</span>
+                        <span class="setting-desc">Enable camera by default</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="videoDefaultToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Section -->
+        <section class="settings-group">
+            <div class="group-header">Privacy</div>
+            <div class="settings-card">
+                <div class="setting-row clickable" id="blockedContactsRow">
+                    <div class="setting-info">
+                        <span class="setting-title">Blocked Contacts</span>
+                        <span class="setting-desc">Manage blocked callers</span>
+                    </div>
+                    <span class="chevron">›</span>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Who Can Call Me</span>
+                        <span class="setting-desc">Incoming call scope</span>
+                    </div>
+                    <select id="whoCanCallSelect" class="setting-select">
+                        <option value="everyone">Everyone</option>
+                        <option value="contacts" selected>My Contacts</option>
+                        <option value="nobody">Nobody</option>
+                    </select>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Who Can See Last Seen</span>
+                        <span class="setting-desc">Activity visibility</span>
+                    </div>
+                    <select id="lastSeenSelect" class="setting-select">
+                        <option value="everyone">Everyone</option>
+                        <option value="contacts" selected>My Contacts</option>
+                        <option value="nobody">Nobody</option>
+                    </select>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Read Receipts</span>
+                        <span class="setting-desc">Send delivery checkmarks</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="readReceiptsToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notifications Section -->
+        <section class="settings-group">
+            <div class="group-header">Notifications</div>
+            <div class="settings-card">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Incoming Calls</span>
+                        <span class="setting-desc">Show full screen alerts</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="notifIncomingToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Missed Calls</span>
+                        <span class="setting-desc">Notify missed calls</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="notifMissedToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Push Notifications</span>
+                        <span class="setting-desc">Enable background alerts</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="pushNotifToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section class="settings-group">
+            <div class="group-header">Security</div>
+            <div class="settings-card">
+                <div class="setting-row clickable" id="changePasswordRow">
+                    <div class="setting-info">
+                        <span class="setting-title">Change Password</span>
+                        <span class="setting-desc">Update account credentials</span>
+                    </div>
+                    <span class="chevron">›</span>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">2-Step Verification</span>
+                        <span class="setting-desc">Enhanced account defense</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="twoFactorToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row clickable" id="logoutDevicesRow">
+                    <div class="setting-info">
+                        <span class="setting-title" style="color: var(--danger);">Logout All Devices</span>
+                        <span class="setting-desc">End all active sessions</span>
+                    </div>
+                    <span class="chevron">›</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Storage Section -->
+        <section class="settings-group">
+            <div class="group-header">Storage</div>
+            <div class="settings-card">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Cache Size</span>
+                        <span class="setting-desc" id="cacheSizeText">Calculating...</span>
+                    </div>
+                    <button id="clearCacheBtn" class="btn-danger-outline">Clear</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="settings-group">
+            <div class="group-header">About Velora</div>
+            <div class="settings-card">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <span class="setting-title">Version</span>
+                        <span class="setting-desc">v1.0.0 (Build 2026)</span>
+                    </div>
+                </div>
+                <div class="setting-row clickable" id="rateAppRow">
+                    <div class="setting-info">
+                        <span class="setting-title">Rate App</span>
+                        <span class="setting-desc">Give us 5 stars on Store</span>
+                    </div>
+                    <span class="chevron">›</span>
+                </div>
+                <div class="setting-row clickable" id="shareAppRow">
+                    <div class="setting-info">
+                        <span class="setting-title">Share Velora</span>
+                        <span class="setting-desc">Spread the app to friends</span>
+                    </div>
+                    <span class="chevron">›</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logout -->
+        <div class="logout-wrapper">
+            <button id="logout-btn" class="logout-btn-full">Logout from Velora</button>
+        </div>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html">
+            <span>🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="contacts.html">
+            <span>👥</span>
+            <span>Contacts</span>
+        </a>
+        <a href="chat.html">
+            <span>💬</span>
+            <span>Chats</span>
+        </a>
+        <a href="dialpad.html">
+            <span>📞</span>
+            <span>Dial Pad</span>
+        </a>
+        <a href="recent.html">
+            <span>🕒</span>
+            <span>Recent</span>
+        </a>
+        <a href="settings.html" class="active">
+            <span>⚙️</span>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <!-- Modal for Edit Profile -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <h2>Edit Profile</h2>
+            <input type="text" id="editNameInput" placeholder="Full Name">
+            <input type="tel" id="editPhoneInput" placeholder="Phone Number">
+            <div class="modal-buttons">
+                <button id="saveProfileBtn" class="btn-primary">Save</button>
+                <button id="cancelProfileBtn" class="btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script type="module" src="js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/* ==========================================
+   Velora Missed Calls Styles
+========================================== */
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 16px 20px;
+    background: rgba(239, 68, 68, 0.92);
+    backdrop-filter: blur(20px);
+    color: white;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.25);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header-title {
+    flex: 1;
+}
+
+.header-title h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.header-title span {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.text-action-btn {
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.filter-chip {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.filter-chip.active {
+    background: white;
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.page-content {
+    padding: 20px 16px 110px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.missed-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-left: 5px solid #ef4444;
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.missed-card.read {
+    border-left-color: #cbd5e1;
+    opacity: 0.8;
+}
+
+.missed-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fecaca;
+    color: #dc2626;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.missed-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.missed-time {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.missed-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.call-back-btn {
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: #fef2f2;
+    color: #ef4444;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+}

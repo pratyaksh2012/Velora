@@ -1,0 +1,361 @@
+/* ==========================================
+   Velora Authentication Styles
+========================================== */
+
+.auth-container{
+
+    min-height:calc(100vh - 70px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+.auth-card{
+
+    width:100%;
+    max-width:470px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+    animation:fadeUp .6s ease;
+
+}
+
+.logo-section{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.logo{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin-bottom:15px;
+
+}
+
+.logo-section h1{
+
+    font-size:34px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.logo-section p{
+
+    color:var(--text-light);
+
+    margin-top:8px;
+
+}
+
+.auth-card h2{
+
+    text-align:center;
+
+    margin-bottom:8px;
+
+    color:var(--black);
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    margin-bottom:28px;
+
+}
+
+.input-group{
+
+    margin-bottom:18px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:500;
+
+}
+
+.input-group input{
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    border:2px solid var(--border);
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+.input-group input:focus{
+
+    border-color:var(--primary);
+
+}
+
+.password-box{
+
+    position:relative;
+
+}
+
+.password-box input{
+
+    padding-right:55px;
+
+}
+
+.password-box button{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:none;
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+.form-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:20px 0;
+
+    font-size:14px;
+
+}
+
+.form-options a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+#login-btn,
+#signup-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+#login-btn:hover,
+#signup-btn:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:28px 0;
+
+    color:var(--text-light);
+
+    position:relative;
+
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+
+    height:1px;
+
+    background:#d1d5db;
+
+    flex:1;
+
+}
+
+.divider span{
+
+    padding:0 16px;
+
+}
+
+.signup-btn{
+
+    display:block;
+
+    text-align:center;
+
+    background:white;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+    padding:14px;
+
+    border-radius:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.signup-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.password-strength{
+
+    width:100%;
+
+    height:8px;
+
+    background:#e5e7eb;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-top:-6px;
+
+    margin-bottom:8px;
+
+}
+
+#strength-bar{
+
+    width:0;
+
+    height:100%;
+
+    background:var(--danger);
+
+    transition:.3s;
+
+}
+
+#strength-text{
+
+    display:block;
+
+    color:var(--text-light);
+
+    margin-bottom:18px;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .auth-card{
+
+        padding:28px;
+
+        border-radius:22px;
+
+    }
+
+    .logo{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+    .logo-section h1{
+
+        font-size:28px;
+
+    }
+
+}

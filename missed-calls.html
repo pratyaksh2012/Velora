@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora • Missed Calls</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/missed-calls.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-top">
+            <button class="back-btn" onclick="history.back()">←</button>
+            <div class="header-title">
+                <h2>Missed Calls</h2>
+                <span id="unreadCountText">0 Unread</span>
+            </div>
+            <button id="markAllReadBtn" class="text-action-btn">Mark all read</button>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-chip active" data-period="all">All</button>
+            <button class="filter-chip" data-period="today">Today</button>
+            <button class="filter-chip" data-period="yesterday">Yesterday</button>
+            <button class="filter-chip" data-period="week">Last 7 Days</button>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div id="missedContainer" class="call-list"></div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html">
+            <span>🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="contacts.html">
+            <span>👥</span>
+            <span>Contacts</span>
+        </a>
+        <a href="chat.html">
+            <span>💬</span>
+            <span>Chats</span>
+        </a>
+        <a href="dialpad.html">
+            <span>📞</span>
+            <span>Dial Pad</span>
+        </a>
+        <a href="recent.html">
+            <span>🕒</span>
+            <span>Recent</span>
+        </a>
+        <a href="settings.html">
+            <span>⚙️</span>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script type="module" src="js/missed-calls.js"></script>
+</body>
+</html>

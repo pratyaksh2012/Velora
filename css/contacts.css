@@ -1,0 +1,568 @@
+/*=========================
+      Header
+=========================*/
+
+.contacts-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    padding:20px;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(37,99,235,.92);
+
+    color:white;
+
+    border-bottom-left-radius:25px;
+
+    border-bottom-right-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.header-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.profile-avatar{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#2563eb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+}
+
+.header-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.header-actions button{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#2563eb;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.header-actions button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.search-box{
+
+    margin-top:20px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:18px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+}
+/* ==========================================
+   Velora Contacts
+========================================== */
+
+body{
+
+    margin:0;
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#2563eb,#60a5fa,#e0f2fe);
+
+    min-height:100vh;
+
+}
+
+.contacts-page{
+
+    padding:30px 20px 120px;
+
+}
+
+.contacts-page h1{
+
+    color:white;
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.contacts-page p{
+
+    color:white;
+
+    text-align:center;
+
+    opacity:.9;
+
+    margin-bottom:35px;
+
+}
+
+#contactsContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+/* ===========================
+   Contact Card
+=========================== */
+
+.contact-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.contact-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.contact-avatar{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.contact-name{
+
+    font-size:20px;
+
+    color:#222;
+
+    font-weight:600;
+
+}
+
+.contact-number{
+
+    color:#666;
+
+    margin-top:5px;
+
+}
+/* ===========================
+   Right Buttons
+=========================== */
+
+.contact-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.contact-actions button{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 18px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.call-btn{
+
+    background:#22c55e;
+
+    color:white;
+
+}
+
+.call-btn:hover{
+
+    background:#16a34a;
+
+}
+
+.more-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.more-btn:hover{
+
+    background:#1d4ed8;
+
+}
+/* ===========================
+   Floating Button
+=========================== */
+
+#addContactBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:110px;
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:36px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    cursor:pointer;
+
+    z-index:2000;
+
+}
+
+#addContactBtn:hover{
+
+    transform:scale(1.08);
+
+}
+/* ===========================
+   Contact Modal
+=========================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.modal-content{
+
+    width:90%;
+
+    max-width:420px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.modal-content h2{
+
+    margin-top:0;
+
+    color:#2563eb;
+
+    text-align:center;
+
+}
+
+.modal-content input{
+
+    width:100%;
+
+    margin:12px 0;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    box-sizing:border-box;
+
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:20px;
+
+}
+
+.modal-buttons button{
+
+    width:48%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+#saveContactBtn{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+#cancelContactBtn{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+.edit-btn{
+
+    background:#f59e0b;
+
+    color:white;
+
+}
+
+.edit-btn:hover{
+
+    background:#d97706;
+
+}
+
+.delete-btn{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+}
+.favorite-btn{
+
+    background:#facc15;
+
+    color:#222;
+
+}
+
+.favorite-btn:hover{
+
+    background:#eab308;
+
+}
+.contact-card{
+
+    transition:.25s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+
+}
+
+.contact-avatar{
+
+    transition:.25s;
+
+}
+
+.contact-card:hover .contact-avatar{
+
+    transform:scale(1.08);
+
+}
+
+.contact-actions button{
+
+    transition:.2s;
+
+}
+
+.contact-actions button:hover{
+
+    transform:scale(1.08);
+
+}
+.empty-state{
+
+    padding:60px;
+    
+    text-align:center;
+    
+    color:#888;
+    
+    }
+    
+    .empty-state h2{
+    
+    font-size:60px;
+    
+    margin-bottom:15px;
+    
+    }

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Velora | Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/darkmode.css">
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#2563eb">
+
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="top-left">
+    
+            <h2>Velora</h2>
+    
+            <span>Modern Calling Platform</span>
+    
+        </div>
+    
+        <div class="top-right">
+    
+            <button id="installBtn">
+    
+                📲 Install
+    
+            </button>
+    
+            <button id="notificationBtn">
+    
+                🔔
+    
+                <span class="badge">3</span>
+    
+            </button>
+            <button id="darkModeBtn">
+
+                🌙
+                
+                </button>
+            <button id="logout-btn">
+
+                Logout
+            
+            </button>
+        </div>
+    
+    </header>
+
+
+<main class="dashboard">
+    <section class="quick-settings">
+
+        <button onclick="location.href='favorites.html'">
+    
+            ⭐ Favorites
+    
+        </button>
+    
+        <button onclick="location.href='messages.html'">
+    
+            💬 Messages
+    
+        </button>
+    
+        <button onclick="location.href='notifications.html'">
+    
+            🔔 Notifications
+    
+        </button>
+    
+        <button onclick="location.href='settings.html'">
+    
+            ⚙ Settings
+    
+        </button>
+    
+    </section>
+    <section class="profile-card">
+
+        <div class="profile-avatar">
+    
+            V
+    
+        </div>
+    
+        <div class="profile-info">
+    
+            <h2 id="userName">
+    
+                Welcome User
+    
+            </h2>
+    
+            <p id="userEmail">
+    
+                user@example.com
+    
+            </p>
+    
+        </div>
+
+        <button id="callBtn" class="call-button">
+            📞 Call
+        </button>
+    
+    </section>
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search contacts..."
+        >
+    
+        <button id="searchBtn">
+    
+            Search
+    
+        </button>
+    
+    </section>
+    <section class="welcome-card">
+
+        <h1>Welcome to Velora</h1>
+
+        <p>Your smart calling and communication platform.</p>
+
+    </section>
+
+    <section class="quick-actions">
+
+        <div class="action-card" onclick="location.href='contacts.html'">
+
+            <div class="icon">👥</div>
+
+            <h3>Contacts</h3>
+
+            <p>Save and manage contacts</p>
+
+        </div>
+
+        <div class="action-card" onclick="location.href='dialpad.html'">
+
+            <div class="icon">☎️</div>
+
+            <h3>Dial Pad</h3>
+
+            <p>Dial any number instantly</p>
+
+        </div>
+
+        <div class="action-card" onclick="location.href='recent.html'">
+
+            <div class="icon">🕒</div>
+
+            <h3>Recent Calls</h3>
+
+            <p>View your latest calls</p>
+
+        </div>
+
+        <div class="action-card" onclick="location.href='favorites.html'">
+
+            <div class="icon">⭐</div>
+
+            <h3>Favorites</h3>
+
+            <p>Your favorite contacts</p>
+
+        </div>
+
+    </section>
+    <section class="dashboard-overview">
+
+        <div class="stat-card">
+    
+            <h2 id="contactCount">0</h2>
+    
+            <span>Contacts</span>
+    
+        </div>
+    
+        <div class="stat-card">
+    
+            <h2 id="recentCount">0</h2>
+    
+            <span>Recent Calls</span>
+    
+        </div>
+    
+        <div class="stat-card">
+    
+            <h2 id="favoriteCount">0</h2>
+    
+            <span>Favorites</span>
+    
+        </div>
+    
+    </section>
+    
+    <section class="recent-activity">
+    
+        <h2>Recent Activity</h2>
+    
+        <div class="activity-box">
+    
+            <p>No recent activity available.</p>
+    
+        </div>
+    
+    </section>
+
+</main>
+
+
+<nav class="bottom-nav">
+
+<a href="dashboard.html">
+
+🏠<br>Home
+
+</a>
+
+<a href="contacts.html">
+
+👥<br>Contacts
+
+</a>
+<a href="chat.html">
+    <span>💬</span>
+    <span>Chats</span>
+</a>
+<a href="missed-calls.html">
+    <span>Missed-calls</span>
+</a>
+<a href="dialpad.html">
+
+☎️<br>Dial Pad
+
+</a>
+
+<a href="recent.html">
+
+🕒<br>Recent
+
+</a>
+
+<a href="settings.html">
+
+⚙️<br>Settings
+
+</a>
+
+</nav>
+<script src="js/theme.js"></script>
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/install.js"></script>
+<script type="module" src="js/calling.js"></script>
+<script type="module" src="js/dashboard.js"></script>
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h3>Velora</h3>
+
+        <p>Modern Calling Platform</p>
+
+        <p>Version 1.0.0</p>
+
+        <p>© 2026 Velora. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

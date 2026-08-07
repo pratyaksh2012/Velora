@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora | Contacts</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#2563eb">
+</head>
+
+<body>
+
+    <header class="contacts-header">
+        <div class="header-top">
+            <div class="user-info">
+                <div class="profile-avatar">
+                    V
+                </div>
+                <div>
+                    <h2>My Contacts</h2>
+                    <span id="contactCount">
+                        0 Contacts
+                    </span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="searchBtn">
+                    🔍
+                </button>
+                <button onclick="location.href='settings.html'">
+                    ⚙️
+                </button>
+            </div>
+        </div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search contacts...">
+        </div>
+    </header>
+
+    <main class="contacts-page">
+        <h1>Your Contacts</h1>
+        <p>Your saved contacts will appear here.</p>
+
+        <div id="contactsContainer"></div>
+
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <input type="hidden" id="contactId">
+                <h2>Add Contact</h2>
+
+                <input type="text" id="contactName" placeholder="Full Name">
+                <input type="tel" id="contactPhone" placeholder="Mobile Number">
+                <input type="email" id="contactEmail" placeholder="Email (Optional)">
+
+                <div class="modal-buttons">
+                    <button id="saveContactBtn">
+                        Save
+                    </button>
+                    <button id="cancelContactBtn">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <button id="addContactBtn">+</button>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html">
+            🏠
+            <span>Home</span>
+        </a>
+        <a href="contacts.html" class="active">
+            👥
+            <span>Contacts</span>
+        </a>
+        <a href="dialpad.html">
+            📞
+            <span>Dial Pad</span>
+        </a>
+        <a href="recent.html">
+            🕒
+            <span>Recent</span>
+        </a>
+        <a href="settings.html">
+            ⚙️
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script type="module" src="js/contacts.js"></script>
+    <script src="js/theme.js"></script>
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+
+</body>
+
+</html>

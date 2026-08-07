@@ -1,0 +1,171 @@
+/* ==========================================
+   Velora Notification Center Styles
+========================================== */
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 16px 20px;
+    background: rgba(37, 99, 235, 0.92);
+    backdrop-filter: blur(20px);
+    color: white;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header-title span {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.text-action-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.action-icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-bar-wrapper {
+    margin-top: 14px;
+}
+
+.search-bar-wrapper input {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 16px;
+    border: none;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    color: #1f2937;
+    outline: none;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.filter-chip {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.filter-chip.active {
+    background: white;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.page-content {
+    padding: 20px 16px 110px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.notif-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.notif-card.unread {
+    background: #ffffff;
+    border-left: 4px solid #2563eb;
+}
+
+.notif-icon-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.notif-body {
+    flex: 1;
+}
+
+.notif-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2px;
+}
+
+.notif-desc {
+    font-size: 13.5px;
+    color: #4b5563;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.notif-time {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.notif-delete {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.notif-delete:hover {
+    color: #ef4444;
+}

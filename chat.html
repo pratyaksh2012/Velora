@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora • Modern Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+
+    <!-- Main Dashboard Chat Layout -->
+    <div class="chat-dashboard-container">
+
+        <!-- Panel 1: Left Chat Sidebar -->
+        <aside id="chatListSidebar" class="chat-sidebar">
+            <header class="sidebar-header">
+                <div class="header-top">
+                    <h2>Messages</h2>
+                    <span id="unreadChatCount" class="badge">0</span>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-bar-wrapper">
+                    <input type="text" id="chatSearchInput" placeholder="Search conversations...">
+                </div>
+
+                <!-- Add Contact Button right below search -->
+                <button id="addContactSidebarBtn" class="add-contact-btn">
+                    ➕ Add Contact
+                </button>
+            </header>
+
+            <!-- Real Firestore Contacts / Chat List -->
+            <div id="chatsList" class="chats-list"></div>
+        </aside>
+
+        <!-- Panel 2: Middle Chat Active Room -->
+        <section id="chatRoomArea" class="chat-room hidden-mobile">
+            <!-- Room Header -->
+            <header class="room-header">
+                <button id="backToListBtn" class="back-btn">←</button>
+                <div class="room-user-info">
+                    <div class="avatar-wrapper">
+                        <div id="roomAvatar" class="avatar">V</div>
+                        <span id="roomOnlineStatus" class="online-indicator"></span>
+                    </div>
+                    <div class="user-text">
+                        <h3 id="roomUserName">Select a Contact</h3>
+                        <span id="roomUserSubtitle">Online</span>
+                    </div>
+                </div>
+                <div class="room-header-actions">
+                    <button id="callVoiceBtn" class="action-icon-btn" title="Voice Call">📞</button>
+                    <button id="callVideoBtn" class="action-icon-btn" title="Video Call">📹</button>
+                    <button id="toggleInfoPanelBtn" class="action-icon-btn" title="Toggle Info Panel">ℹ️</button>
+                </div>
+            </header>
+
+            <!-- Message Stream Area -->
+            <main id="messagesContainer" class="messages-container">
+                <div class="empty-chat-state">
+                    <div class="illustration">💬</div>
+                    <h3>Your Messages</h3>
+                    <p>Select a saved contact or click "+ Add Contact" to start chatting.</p>
+                </div>
+            </main>
+
+            <!-- Message Controls Footer -->
+            <footer class="room-footer">
+                <div class="input-controls">
+                    <button id="attachFileBtn" class="input-action-btn" title="Attach Document/Media">📎</button>
+                    <input type="file" id="fileAttachmentInput" style="display:none;" accept="image/*,video/*,application/pdf">
+
+                    <button id="emojiBtn" class="input-action-btn" title="Emojis">😊</button>
+
+                    <div class="text-input-wrapper">
+                        <textarea id="messageTextInput" placeholder="Type your message..." rows="1"></textarea>
+                    </div>
+
+                    <button id="voiceRecordBtn" class="input-action-btn" title="Voice Message">🎙️</button>
+                    <button id="sendMessageBtn" class="send-btn" title="Send">➤</button>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Panel 3: Right Side Details / Media Panel -->
+        <aside id="infoPanel" class="info-panel hidden-mobile">
+            <div class="info-header">
+                <h3>Contact Info</h3>
+                <button id="closeInfoPanelBtn" class="close-info">✕</button>
+            </div>
+            <div class="info-body">
+                <div id="infoAvatar" class="info-avatar">V</div>
+                <h3 id="infoName">User Name</h3>
+                <p id="infoPhone">+0 000 000 0000</p>
+
+                <div class="media-section">
+                    <h4>Shared Media & Files</h4>
+                    <div class="media-grid">
+                        <div class="media-item">📷 12 Photos</div>
+                        <div class="media-item">📁 3 Files</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Modal for Adding New Contact -->
+    <div id="addContactModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Add New Contact</h2>
+            <input type="text" id="newContactName" placeholder="Full Name">
+            <input type="tel" id="newContactPhone" placeholder="Mobile Number (+123...)">
+            <input type="email" id="newContactEmail" placeholder="Email (Optional)">
+            <div class="modal-buttons">
+                <button id="saveNewContactBtn" class="btn-primary">Save Contact</button>
+                <button id="cancelNewContactBtn" class="btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html">
+            <span>🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="contacts.html">
+            <span>👥</span>
+            <span>Contacts</span>
+        </a>
+        <a href="chat.html" class="active">
+            <span>💬</span>
+            <span>Chats</span>
+        </a>
+        <a href="dialpad.html">
+            <span>📞</span>
+            <span>Dial Pad</span>
+        </a>
+        <a href="recent.html">
+            <span>🕒</span>
+            <span>Recent</span>
+        </a>
+        <a href="settings.html">
+            <span>⚙️</span>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script type="module" src="js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora • Recent Calls</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/recent.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-top">
+            <div class="header-title">
+                <h2>Recent Calls</h2>
+                <span id="callCountText">0 Logs</span>
+            </div>
+            <div class="header-actions">
+                <button id="clearAllBtn" class="action-icon-btn" title="Clear All History">🗑️</button>
+                <button onclick="location.href='missed-calls.html'" class="action-icon-btn badge-btn" title="View Missed Calls">
+                    🚨
+                    <span id="missedBadge" class="badge">0</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="search-bar-wrapper">
+            <input type="text" id="searchInput" placeholder="Search by name, number, or type...">
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-chip active" data-filter="all">All</button>
+            <button class="filter-chip" data-filter="incoming">Incoming</button>
+            <button class="filter-chip" data-filter="outgoing">Outgoing</button>
+            <button class="filter-chip" data-filter="missed">Missed</button>
+            <button class="filter-chip" data-filter="video">Video</button>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div id="recentContainer" class="call-list"></div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html">
+            <span>🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="contacts.html">
+            <span>👥</span>
+            <span>Contacts</span>
+        </a>
+        <a href="chat.html">
+            <span>💬</span>
+            <span>Chats</span>
+        </a>
+        <a href="dialpad.html">
+            <span>📞</span>
+            <span>Dial Pad</span>
+        </a>
+        <a href="recent.html" class="active">
+            <span>🕒</span>
+            <span>Recent</span>
+        </a>
+        <a href="settings.html">
+            <span>⚙️</span>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script type="module" src="js/recent.js"></script>
+</body>
+</html>

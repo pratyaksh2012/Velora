@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora • Dial Pad</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dialpad.css">
+
+    <link rel="icon" href="assets/logo.png">
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header class="dial-header">
+
+    <button class="back-btn" onclick="history.back()">
+        ←
+    </button>
+
+    <h2>Dial Pad</h2>
+
+    <button class="contacts-btn"
+        onclick="location.href='contacts.html'">
+        👥
+    </button>
+
+</header>
+
+
+<!-- Dial Display -->
+
+<section class="dial-display">
+
+    <h2 id="callerName"></h2>
+
+    <input
+        type="text"
+        id="phoneNumber"
+        placeholder="Enter number"
+        readonly
+    >
+
+</section>
+
+
+<!-- Dial Pad -->
+
+<section class="dial-grid">
+
+    <button class="dial-key" data-value="1">
+        <span>1</span>
+        <small>&nbsp;</small>
+    </button>
+
+    <button class="dial-key" data-value="2">
+        <span>2</span>
+        <small>ABC</small>
+    </button>
+
+    <button class="dial-key" data-value="3">
+        <span>3</span>
+        <small>DEF</small>
+    </button>
+
+    <button class="dial-key" data-value="4">
+        <span>4</span>
+        <small>GHI</small>
+    </button>
+
+    <button class="dial-key" data-value="5">
+        <span>5</span>
+        <small>JKL</small>
+    </button>
+
+    <button class="dial-key" data-value="6">
+        <small>MNO</small>
+        <span>6</span>
+    </button>
+
+    <button class="dial-key" data-value="7">
+        <span>7</span>
+        <small>PQRS</small>
+    </button>
+
+    <button class="dial-key" data-value="8">
+        <span>8</span>
+        <small>TUV</small>
+    </button>
+
+    <button class="dial-key" data-value="9">
+        <span>9</span>
+        <small>WXYZ</small>
+    </button>
+
+    <button class="dial-key" data-value="*">
+        <span>*</span>
+    </button>
+
+    <button class="dial-key" data-value="0">
+        <span>0</span>
+        <small>+</small>
+    </button>
+
+    <button class="dial-key" data-value="#">
+        <span>#</span>
+    </button>
+
+</section>
+
+
+<!-- Bottom Actions -->
+
+<section class="dial-actions">
+
+    <button id="deleteBtn" class="delete-btn">
+        ⌫
+    </button>
+
+    <button id="callBtn" class="call-btn">
+        📞
+    </button>
+
+</section>
+
+
+<!-- Bottom Navigation -->
+
+<nav class="bottom-nav">
+
+    <a href="dashboard.html">
+        🏠
+        <span>Home</span>
+    </a>
+
+    <a href="contacts.html">
+        👥
+        <span>Contacts</span>
+    </a>
+
+    <a href="dialpad.html" class="active">
+        📞
+        <span>Dial Pad</span>
+    </a>
+
+    <a href="recent.html">
+        🕒
+        <span>Recent</span>
+    </a>
+
+    <a href="settings.html">
+        ⚙️
+        <span>Settings</span>
+    </a>
+
+</nav>
+
+
+<script type="module" src="js/dialpad.js"></script>
+
+</body>
+</html>
