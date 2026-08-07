@@ -131,7 +131,7 @@ Markdown
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/velora.git](https://github.com/your-username/velora.git)
+   git clone pratyaksh2012.github.io/Velora/
    cd velora
    👤 Author
 Crafted with care and precision by Pratyaksh Pratap Singh.
